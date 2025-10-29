@@ -19,7 +19,7 @@ public class ValidacionCreditosService {
 
     public boolean creditoEmergencia(Long ingreso, Long codTipoCliente) {
         return (ingreso >= 900000 && (codTipoCliente == 1 || codTipoCliente == 2)) ||
-               (ingreso >= 150000 && codTipoCliente == 3);
+                (ingreso >= 150000 && codTipoCliente == 3);
     }
 
     public boolean creditoPagoArancel(Long ingreso, Long codTipoCliente) {
