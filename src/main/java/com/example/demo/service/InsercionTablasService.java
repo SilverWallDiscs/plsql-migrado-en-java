@@ -38,11 +38,11 @@ public class InsercionTablasService {
     public void insertarEstadoCreditoCliente(Long nroCliente, Integer hipotecario, Integer consumo, Integer automotriz, Integer emergencia, Integer arancel) {
         EstadoCreditoCliente ecc = new EstadoCreditoCliente();
         ecc.setNroCliente(nroCliente);
-        ecc.setHipotecario(hipotecario);
-        ecc.setConsumo(consumo);
-        ecc.setAutomotriz(automotriz);
-        ecc.setEmergencia(emergencia);
-        ecc.setArancel(arancel);
+        ecc.setEstadoHipotecario(hipotecario);
+        ecc.setEstadoConsumo(consumo);
+        ecc.setEstadoAutomotriz(automotriz);
+        ecc.setEstadoEmergencia(emergencia);
+        ecc.setEstadoArancel(arancel);
         
         estadoCreditoClienteRepository.save(ecc);
     }

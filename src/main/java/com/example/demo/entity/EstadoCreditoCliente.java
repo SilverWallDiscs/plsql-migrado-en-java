@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
@@ -10,71 +12,47 @@ import jakarta.persistence.Table;
 public class EstadoCreditoCliente {
 
     @Id
-    @Column(name = "nro_cliente")
+@GeneratedValue(strategy = GenerationType.IDENTITY) 
+@Column(name = "cod_estado_credito_cliente")
+private Long codEstadoCreditoCliente;
+
+    @Column(name = "ESTADO_HIPOTECARIO")
+    private Integer estadoHipotecario;
+
+    @Column(name = "ESTADO_CONSUMO")
+    private Integer estadoConsumo;
+
+    @Column(name = "ESTADO_AUTOMOTRIZ")
+    private Integer estadoAutomotriz;
+
+    @Column(name = "ESTADO_EMERGENCIA")
+    private Integer estadoEmergencia;
+
+    @Column(name = "ESTADO_ARANCEL")
+    private Integer estadoArancel;
+
+    @Column(name = "NRO_CLIENTE")
     private Long nroCliente;
 
-    @Column(name = "hipotecario")
-    private Integer hipotecario;
+    // Getters y setters
+    public Long getCodEstadoCreditoCliente() { return codEstadoCreditoCliente; }
+    public void setCodEstadoCreditoCliente(Long codEstadoCreditoCliente) { this.codEstadoCreditoCliente = codEstadoCreditoCliente; }
 
-    @Column(name = "consumo")
-    private Integer consumo;
+    public Integer getEstadoHipotecario() { return estadoHipotecario; }
+    public void setEstadoHipotecario(Integer estadoHipotecario) { this.estadoHipotecario = estadoHipotecario; }
 
-    @Column(name = "automotriz")
-    private Integer automotriz;
+    public Integer getEstadoConsumo() { return estadoConsumo; }
+    public void setEstadoConsumo(Integer estadoConsumo) { this.estadoConsumo = estadoConsumo; }
 
-    @Column(name = "emergencia")
-    private Integer emergencia;
+    public Integer getEstadoAutomotriz() { return estadoAutomotriz; }
+    public void setEstadoAutomotriz(Integer estadoAutomotriz) { this.estadoAutomotriz = estadoAutomotriz; }
 
-    @Column(name = "arancel")
-    private Integer arancel;
+    public Integer getEstadoEmergencia() { return estadoEmergencia; }
+    public void setEstadoEmergencia(Integer estadoEmergencia) { this.estadoEmergencia = estadoEmergencia; }
 
-    // Getters
-    public Long getNroCliente() {
-        return nroCliente;
-    }
+    public Integer getEstadoArancel() { return estadoArancel; }
+    public void setEstadoArancel(Integer estadoArancel) { this.estadoArancel = estadoArancel; }
 
-    public Integer getHipotecario() {
-        return hipotecario;
-    }
-
-    public Integer getConsumo() {
-        return consumo;
-    }
-
-    public Integer getAutomotriz() {
-        return automotriz;
-    }
-
-    public Integer getEmergencia() {
-        return emergencia;
-    }
-
-    public Integer getArancel() {
-        return arancel;
-    }
-
-    // Setters (agregados para resolver los errores)
-    public void setNroCliente(Long nroCliente) {
-        this.nroCliente = nroCliente;
-    }
-
-    public void setHipotecario(Integer hipotecario) {
-        this.hipotecario = hipotecario;
-    }
-
-    public void setConsumo(Integer consumo) {
-        this.consumo = consumo;
-    }
-
-    public void setAutomotriz(Integer automotriz) {
-        this.automotriz = automotriz;
-    }
-
-    public void setEmergencia(Integer emergencia) {
-        this.emergencia = emergencia;
-    }
-
-    public void setArancel(Integer arancel) {
-        this.arancel = arancel;
-    }
+    public Long getNroCliente() { return nroCliente; }
+    public void setNroCliente(Long nroCliente) { this.nroCliente = nroCliente; }
 }
